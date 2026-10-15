@@ -25,7 +25,15 @@ public class CalculatorServiceImpl implements CalculatorService {
         if (num2 != 0) {
             return num1 + " / " + num2 + " = " + ((float)num1 / num2);
         } else {
-            return "На 0 делить нельзя!";
+            return nullError();
         }
+    }
+
+    public String nullError () {
+        return "<b>На ноль делить нельзя!</b>";
+    }
+
+    public String valueError () {
+        return "<b>Не указано значение!</b>";
     }
 }

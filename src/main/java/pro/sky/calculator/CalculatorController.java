@@ -20,22 +20,38 @@ public class CalculatorController {
     }
 
     @GetMapping(path = "/plus")
-    public String plus (@RequestParam ("num1") int num1, @RequestParam ("num2") int num2) {
-        return calculatorService.plus(num1, num2);
+    public String plus (@RequestParam (value = "num1", required = false) Integer num1, @RequestParam (value = "num2", required = false) Integer num2) {
+        if (num1 != null && num2 != null) {
+            return calculatorService.plus(num1, num2);
+        } else {
+            return calculatorService.valueError();
+        }
     }
 
     @GetMapping(path = "/minus")
-    public String minus (@RequestParam ("num1") int num1, @RequestParam ("num2") int num2) {
-        return calculatorService.minus(num1, num2);
+    public String minus (@RequestParam (value = "num1", required = false) Integer num1, @RequestParam (value = "num2", required = false) Integer num2) {
+        if (num1 != null && num2 != null) {
+            return calculatorService.minus(num1, num2);
+        } else {
+            return calculatorService.valueError();
+        }
     }
 
     @GetMapping(path = "/multiply")
-    public String multiply (@RequestParam ("num1") int num1, @RequestParam ("num2") int num2) {
-        return calculatorService.multiply(num1, num2);
+    public String multiply (@RequestParam (value = "num1", required = false) Integer num1, @RequestParam (value = "num2", required = false) Integer num2) {
+        if (num1 != null && num2 != null) {
+            return calculatorService.multiply(num1, num2);
+        } else {
+            return calculatorService.valueError();
+        }
     }
 
     @GetMapping(path = "/divide")
-    public String divide (@RequestParam ("num1") int num1, @RequestParam ("num2") int num2) {
-        return calculatorService.divide(num1, num2);
+    public String divide (@RequestParam (value = "num1", required = false) Integer num1, @RequestParam (value = "num2", required = false) Integer num2) {
+        if (num1 != null && num2 != null) {
+            return calculatorService.divide(num1, num2);
+        } else {
+            return calculatorService.valueError();
+        }
     }
 }

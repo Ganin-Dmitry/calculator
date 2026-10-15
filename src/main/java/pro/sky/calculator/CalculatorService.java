@@ -7,5 +7,7 @@ public interface CalculatorService {
     public String minus (int num1, int num2);
     public String multiply (int num1, int num2);
     public String divide (int num1, int num2);
+    public String valueError ();
+    public String nullError ();
 
 }
