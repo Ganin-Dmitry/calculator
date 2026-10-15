@@ -20,36 +20,36 @@ public class CalculatorController {
     }
 
     @GetMapping(path = "/plus")
-    public String plus (@RequestParam (value = "num1", required = false) Integer num1, @RequestParam (value = "num2", required = false) Integer num2) {
-        if (num1 != null && num2 != null) {
-            return calculatorService.plus(num1, num2);
+    public String plus (@RequestParam (value = "num1", required = false) Integer oneNum, @RequestParam (value = "num2", required = false) Integer twoNum) {
+        if (oneNum != null && twoNum != null) {
+            return calculatorService.plus(oneNum, twoNum);
         } else {
             return calculatorService.valueError();
         }
     }
 
     @GetMapping(path = "/minus")
-    public String minus (@RequestParam (value = "num1", required = false) Integer num1, @RequestParam (value = "num2", required = false) Integer num2) {
-        if (num1 != null && num2 != null) {
-            return calculatorService.minus(num1, num2);
+    public String minus (@RequestParam (value = "num1", required = false) Integer oneNum, @RequestParam (value = "num2", required = false) Integer twoNum) {
+        if (oneNum != null && twoNum != null) {
+            return calculatorService.minus(oneNum, twoNum);
         } else {
             return calculatorService.valueError();
         }
     }
 
     @GetMapping(path = "/multiply")
-    public String multiply (@RequestParam (value = "num1", required = false) Integer num1, @RequestParam (value = "num2", required = false) Integer num2) {
-        if (num1 != null && num2 != null) {
-            return calculatorService.multiply(num1, num2);
+    public String multiply (@RequestParam (value = "num1", required = false) Integer oneNum, @RequestParam (value = "num2", required = false) Integer twoNum) {
+        if (oneNum != null && twoNum != null) {
+            return calculatorService.multiply(oneNum, twoNum);
         } else {
             return calculatorService.valueError();
         }
     }
 
     @GetMapping(path = "/divide")
-    public String divide (@RequestParam (value = "num1", required = false) Integer num1, @RequestParam (value = "num2", required = false) Integer num2) {
-        if (num1 != null && num2 != null) {
-            return calculatorService.divide(num1, num2);
+    public String divide (@RequestParam (value = "num1", required = false) Integer oneNum, @RequestParam (value = "num2", required = false) Integer twoNum) {
+        if (oneNum != null && twoNum != null) {
+            return calculatorService.divide(oneNum, twoNum);
         } else {
             return calculatorService.valueError();
         }

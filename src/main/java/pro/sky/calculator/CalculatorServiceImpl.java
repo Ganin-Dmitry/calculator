@@ -9,21 +9,21 @@ public class CalculatorServiceImpl implements CalculatorService {
         return "<b>Добро пожаловать в калькулятор!</b>";
     }
 
-    public String plus (int num1, int num2) {
-        return num1 + " + " + num2 + " = " + (num1 + num2);
+    public String plus (int oneNum, int twoNum) {
+        return oneNum + " + " + twoNum + " = " + (oneNum + twoNum);
     }
 
-    public String minus (int num1, int num2) {
-        return num1 + " - " + num2 + " = " + (num1 - num2);
+    public String minus (int oneNum, int twoNum) {
+        return oneNum + " - " + twoNum + " = " + (oneNum - twoNum);
     }
 
-    public String multiply (int num1, int num2) {
-        return num1 + " * " + num2 + " = " + (num1 * num2);
+    public String multiply (int oneNum, int twoNum) {
+        return oneNum + " * " + twoNum + " = " + (oneNum * twoNum);
     }
 
-    public String divide (int num1, int num2) {
-        if (num2 != 0) {
-            return num1 + " / " + num2 + " = " + ((float)num1 / num2);
+    public String divide (int oneNum, int twoNum) {
+        if (twoNum != 0) {
+            return oneNum + " / " + twoNum + " = " + ((float)oneNum / twoNum);
         } else {
             return nullError();
         }
